@@ -18,16 +18,12 @@ const EmployeeTable = ({ emp }) => {
         </tr>
       </thead>
       <tbody>
-        {
-          //if(emp.length > 0){...} equivalent
-          emp.length > 0 &&
-            emp.map((e, index) => (
-              <tr>
-                <td>{e.name.first}</td>
-                <td key={index}>Table cell {e.name.first}</td>
-              </tr>
-            ))
-        }
+        {Array.from({ length: 10 }).map((_, index) => (
+          <tr>
+            <td>{index + 1}</td>
+            <td key={index}>Table cell {index}</td>
+          </tr>
+        ))}
       </tbody>
     </Table>
   );
