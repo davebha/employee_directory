@@ -24,7 +24,9 @@ const EmployeeTable = ({ emp }) => {
             emp.map((e, index) => (
               <tr>
                 <td>{e.name.first}</td>
-                <td key={index}>Table cell {e.name.first}</td>
+                <td key={index}>{e.email}</td>
+                <td key={index}>{e.phone}</td>
+                <td key={index}>Table cell {e.dob.date}</td>
               </tr>
             ))
         }
